@@ -36,6 +36,7 @@ echo $pet->name;
 
 $movePosition = $pet->moveTo(1,1);
  echo "(" . $movePosition['x'] . " , " . $movePosition['y'] . ")";
+  echo "<br>";
  echo "<br>";
 
 
