@@ -6,6 +6,17 @@ class Cat {
  //class 封裝
     public $name; //屬性
     protected $position;
+	
+
+     public function setName($name)
+     {
+	$this->name = $name;
+     }
+
+	public function get Name()
+     {
+	return $this->name;
+     }
      public function __construct($name) {
          //function = 方法，__construct = 建構子
         $this->name = $name;
@@ -15,6 +26,11 @@ class Cat {
      public function moveTo($x, $y) {
          $this->position['x'] = 3;
          $this->position['y'] = 5;
+         return $this->position;
+     }
+     public function move($x, $y) {
+         $this->position['x'] += 3;
+         $this->position['y'] += 5;
          return $this->position;
      }
      public function resetPosition() {
@@ -37,13 +53,7 @@ echo $pet->name;
 $movePosition = $pet->moveTo(1,1);
  echo "(" . $movePosition['x'] . " , " . $movePosition['y'] . ")";
 
-
-
-  echo "<br>";
  echo "<br>";
-
-
-
 
 $movePosition = $pet->resetPosition();
  echo "(" . $movePosition['x'] . " , " . $movePosition['y'] . ")";
