@@ -4,7 +4,7 @@
 
 class Cat {
  //class «Ê¸Ë
-    public $name; //ÄÝ©Ê
+    protected $name; //ÄÝ©Ê
     protected $position;
 	
 
@@ -13,7 +13,7 @@ class Cat {
 	$this->name = $name;
      }
 
-	public function get Name()
+	public function getName()
      {
 	return $this->name;
      }
@@ -24,13 +24,13 @@ class Cat {
         $this->position = ['x'=>4,'y'=>6];
      }
      public function moveTo($x, $y) {
-         $this->position['x'] = 3;
-         $this->position['y'] = 5;
+         $this->position['x'] = $x;
+         $this->position['y'] = $y;
          return $this->position;
      }
      public function move($x, $y) {
-         $this->position['x'] += 3;
-         $this->position['y'] += 5;
+         $this->position['x'] += $x;
+         $this->position['y'] += $y;
          return $this->position;
      }
      public function resetPosition() {
@@ -58,3 +58,6 @@ $movePosition = $pet->moveTo(1,1);
 $movePosition = $pet->resetPosition();
  echo "(" . $movePosition['x'] . " , " . $movePosition['y'] . ")";
  ?>
+
+
+http://tw2.php.net/manual/zh/index.php
